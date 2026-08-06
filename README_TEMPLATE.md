@@ -1,17 +1,15 @@
-# [Project Title]
-> *One sentence. What did you analyze, build, or solve - and why does it matter?*
+# Coffee Consumer Intelligence Dashboard
 
 ---
 
 ## ⚙️ Project Type Flags
-> *Check what applies. This helps reviewers and collaborators understand the nature of the work at a glance. Delete this block before publishing.*
 
-- [ ] Exploratory Data Analysis (EDA)
+-  Exploratory Data Analysis (EDA)
 - [ ] SQL Analysis / Querying
-- [ ] Dashboard / Data Visualization
-- [ ] Data Pipeline / ETL
+-  Dashboard / Data Visualization
+-  Data Pipeline / ETL
 - [ ] Predictive Modelling / Machine Learning
-- [ ] Data Cleaning / Wrangling
+-  Data Cleaning / Wrangling
 - [ ] End-to-End (multiple of the above)
 - [ ] Other: ___________
 
@@ -37,59 +35,37 @@
 
 ## 1. Project Overview
 
-<!--
-  Write 3–5 sentences in plain language.
-  Cover: context → problem → approach → outcome.
-  Read it out loud. If it sounds like a form - rewrite it.
 
-  WHAT GOOD LOOKS LIKE:
-  "A mid-size retail business was seeing inconsistent revenue across
-  its regional stores but couldn't identify the root cause. This project
-  explored 18 months of transaction data across five regions to determine
-  whether underperformance was driven by sales volume, pricing, or return
-  rates. The analysis revealed that one region's gap was almost entirely
-  explained by an unusually high return rate on a single product category -
-  a finding invisible in the company's top-level reporting."
+**Context:** Coffee has evolved beyond a daily beverage into a lifestyle product shaped by consumer preferences, purchasing behaviour, brewing habits, and perceived value. As the specialty coffee industry becomes increasingly, competitive, business require more than just sales report - they need actionable consumer intelligence to understand what drives preferences, spending, and long-term engagement.
+The Coffee Consumer Intelligence Dashboard was developed to transform more than 4000 coffee taste survey responses into an executive decision-support solution. Rather than presenting descriptive statistics alone, the dashboard identifies the behavioural patterns that influence coffee consumption and purchasing decisions. Interactive filtering enables stakeholders to explore trends across different consumer segments with dynamic KPIs and narrative insights provide immediate interpretation of the findings.
 
-  WHAT TO AVOID:
-  "This project analyzes sales data to find trends and insights."
-  (Too vague. Could describe 10,000 projects. Describes none of them.)
--->
+**Problem Statement:** Coffee businesses collect significant amounts of consumer feedback through surveys and testing events. However, this information often exits in isolated datasets that provide limited business value without structured analysis.
+As a result, stakeholders struggle to answer strategic questions such as;
+-  Which coffee characteristics drive consumer preference?
+-  Which brewing methods dominate current consumer preference?
+-  How much are consumers willing to spend on coffee and brewing equipment?
+-  Do blind taste results align with stated coffee preferences?
+-  Which demographic groups represent the highest-value customer segments?
 
-**Context:** [The business, research, or personal situation that motivated this project.]
+**Approach:** A structured Business Intelligence methodology was adopted to transform raw survey responses into actionable insights. Rather than focusing solely on visualization, the project followed a systematic analytical process that aligned business objectives with technical implementation. Processes such as, business understanding, data understanding, data preparation, data modelling, Exploratory Data Analysis (EDA), KPI development, dashboard development, business insight generation, and strategic recommendation development.
+This structured methodology ensured that the project progressed logically from business understanding to actionable recommendations, resulting in an analytical solution that is both technically robust and strategically relevant.
 
-**Problem Statement:** [The specific question or challenge you were addressing.]
-
-**Approach:** [In 1–2 sentences - how did you tackle it?]
-
-**Outcome:** [What did you produce or discover?]
+**Outcome:** The completed dashboard delivers a centralized executive reporting solution that transforms complex survey data into clear, interactive, and actionable business insights. By integrating consumer preferences, blind taste evaluations, spending behaviour, and demographic segmentation into a single analytical platform, the solution enables stakeholders to quickly identify emerging trends, evaluate consumer value perception, and make informed strategic decisions based on data rather than assumptions.
 
 ---
 
 ## 2. Objectives
 
-<!--
-  Write objectives that are specific enough to succeed or fail.
-  Use action-oriented verbs: Identify, Determine, Quantify, Build, Evaluate.
 
-  WHAT GOOD LOOKS LIKE:
-  ✅ "Determine whether customer churn rate correlates with support ticket volume."
-  ✅ "Identify the top three revenue-driving product categories across all regions."
-  ✅ "Build a reproducible pipeline that ingests and cleans daily sales exports."
+- **Primary Objective:** The primary objective of this project is to deliver an executive dashboard that converts survey responses into meaningful business insights for decision-makers. Also, the project aims to:
+- **Secondary Objective 1:** Analyze consumer coffee preferences across coffee styles, roast levels, brewing methods, strength, and caffeine choices.
+- **Secondary Objective 2:** Evaluate blind taste test outcomes to identify products with the strongest sensory appeal.
+- **Secondary Objective 3:** Examine consumer purchasing behaviour, spending patterns, and willingness to pay.
+- **Secondary Objective 4:** Understand how demographics influence coffee preferences and purchasing decision.
+- **Secondary Objective 5:** Measure consumer perceptions of cafe experiences and home brewing equipment.
+- **Secondary Objective 6:** Build an interactive dashboard that enables executive to monitor key consumer trends through dynamic filtering and visualization.
+- **Secondary Objective 7:** Deliver actionable recommendations that support product development, pricing strategies, and customer engagement initiatives.
 
-  WHAT TO AVOID:
-  ❌ "Explore the data."
-  ❌ "Gain insights."
-  ❌ "Understand trends."
-  (These can't fail - which means they can't succeed either.)
--->
-
-- **Primary Objective:** [The main thing you set out to do]
-- **Secondary Objective 1:** [Supporting goal]
-- **Secondary Objective 2:** [Supporting goal]
-- **Secondary Objective 3:** [Remove if not applicable]
-
-> 💡 *Every analysis decision in this project traces back to one of these objectives.*
 
 ---
 
@@ -97,42 +73,23 @@
 
 ### Scope
 
-<!--
-  WHAT GOOD LOOKS LIKE:
-  In Scope: "Transaction-level data for Regions A–E, Jan 2023–Jun 2024.
-             Analysis covers revenue, return rates, and product category performance."
-  Out of Scope: "Customer demographics and marketing spend data were excluded -
-                 demographic data was incomplete for two regions, and marketing
-                 data sits in a separate system outside this engagement."
-
-  WHAT TO AVOID:
-  ❌ Leaving Out of Scope blank. This is the section that protects your credibility.
-     If you don't define the fence, reviewers assume you missed things.
--->
 
 | Dimension | Details |
 |-----------|---------|
-| **In Scope** | [What is included - data sources, time periods, segments] |
-| **Out of Scope** | [What you explicitly excluded - and a brief reason why] |
-| **Time Period** | [Date range of the data or the project itself] |
-| **Granularity** | [Unit of analysis - row-level, daily aggregates, per-user, etc.] |
+| **In Scope** |  Consumer demographic analysis.  Coffee consumption frequency and drinking locations.  Coffee style, roast level, strength, and caffeine preferences.  Brewing method analysis.  Consumer motivations for drinking coffee.  Spending behaviour and willingness to pay.  Coffee equipment spending and perceived equipment value.  Cafe value perception.  Blind taste test evaluation, including preference, bitterness, and acidity analysis.  Customer segmentation based on demographic and behavioural attributes.  Interactive Power BI dashboard development.  Business insight generation and strategic recommendations. |
+| **Out of Scope** | The dataset does not support the following analyses and they are intentionally excluded from the project:  Sales revenue analysis.  Profitability analysis.  Inventory management.  Customer lifetime value analysis.  Geographic sales performance.  Market share analysis.  Seasonal or time-series trend analysis.  Predictive forecasting.  Customer churn analysis. |
 
 ### Tools & Technologies
 
-<!--
-  List only what you actually used on this project.
-  This is not your skills section - it's the project's technical context.
--->
 
 | Category | Tool(s) Used |
 |----------|-------------|
-| Data Storage | [e.g., PostgreSQL, CSV files, BigQuery, S3] |
-| Data Processing | [e.g., Python, R, SQL, Excel, dbt] |
-| Analysis | [e.g., pandas, dplyr, custom SQL queries] |
-| Visualization | [e.g., Matplotlib, Tableau, Power BI, Looker] |
-| Version Control | [e.g., Git / GitHub] |
-| Documentation | [e.g., Markdown, Notion] |
-| Other | [Any additional tools] |
+| Data Storage | CSV files |
+| Data Processing | Excel, Power Query |
+| Analysis | DAX |
+| Visualization | Power BI |
+| Version Control | Git / GitHub |
+| Documentation | Markdown |
 
 ---
 
