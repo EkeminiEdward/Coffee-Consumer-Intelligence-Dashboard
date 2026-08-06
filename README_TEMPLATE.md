@@ -76,8 +76,8 @@ This structured methodology ensured that the project progressed logically from b
 
 | Dimension | Details |
 |-----------|---------|
-| **In Scope** |  Consumer demographic analysis.  Coffee consumption frequency and drinking locations.  Coffee style, roast level, strength, and caffeine preferences.  Brewing method analysis.  Consumer motivations for drinking coffee.  Spending behaviour and willingness to pay.  Coffee equipment spending and perceived equipment value.  Cafe value perception.  Blind taste test evaluation, including preference, bitterness, and acidity analysis.  Customer segmentation based on demographic and behavioural attributes.  Interactive Power BI dashboard development.  Business insight generation and strategic recommendations. |
-| **Out of Scope** | The dataset does not support the following analyses and they are intentionally excluded from the project:  Sales revenue analysis.  Profitability analysis.  Inventory management.  Customer lifetime value analysis.  Geographic sales performance.  Market share analysis.  Seasonal or time-series trend analysis.  Predictive forecasting.  Customer churn analysis. |
+| **In Scope** |  Consumer demographic analysis, coffee consumption frequency and drinking locations, coffee style, roast level, strength, and caffeine preferences.  Brewing method analysis, consumer motivations for drinking coffee, spending behaviour and willingness to pay.  Coffee equipment spending and perceived equipment value.  Cafe value perception.  Blind taste test evaluation, including preference, bitterness, and acidity analysis, customer segmentation based on demographic and behavioural attributes, interactive Power BI dashboard development, and business insight generation and strategic recommendations. |
+| **Out of Scope** | The dataset does not support the following analyses and they are intentionally excluded from the project:  Sales revenue analysis, profitability analysis, inventory management, customer lifetime value analysis, geographic sales performance, market share analysis, seasonal or time-series trend analysis, predictive forecasting, and customer churn analysis. |
 
 ### Tools & Technologies
 
