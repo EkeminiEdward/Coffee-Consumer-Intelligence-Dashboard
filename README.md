@@ -22,14 +22,13 @@
 4. [Repository Structure](#4-repository-structure)
 5. [Data Workflow](#5-data-workflow)
 6. [Data Model & Schema](#6-data-model--schema)
-7. [ERD - Entity Relationship Diagram](#7-erd--entity-relationship-diagram) *(SQL projects)*
-8. [Analysis & Metrics](#8-analysis--metrics)
-9. [Key Insights](#9-key-insights)
-10. [Recommendations](#10-recommendations)
-11. [Assumptions & Limitations](#11-assumptions--limitations)
-12. [Future Enhancements](#12-future-enhancements)
-13. [Deliverables](#13-deliverables)
-14. [Author](#14-author)
+7. [Analysis & Metrics](#7-analysis--metrics)
+8. [Key Insights](#8-key-insights)
+9. [Recommendations](#9-recommendations)
+10. [Assumptions & Limitations](#10-assumptions--limitations)
+11. [Future Enhancements](#11-future-enhancements)
+12. [Deliverables](#12-deliverables)
+13. [Author](#13-author)
 
 ---
 
@@ -96,35 +95,28 @@ The primary objective of this project is to deliver an executive dashboard that 
 ## 4. Repository Structure
 
 ```
-[project-root]/
+Coffee-Consumer-Intelligence-Dashboard/
 │
-├── data/
-│   ├── raw/                  # Original, unmodified source data - never edited
-│   ├── processed/            # Cleaned and transformed data
-│   └── external/             # Reference data, lookup tables, third-party files
+├── README.md
 │
-├── notebooks/                # Jupyter, R Markdown, or Colab notebooks
+├── reports/ 
+│      ├──Coffee_Consumer_Intelligence_Dashboard.pbix
 │
-├── scripts/                  # Reusable .py, .R, or .sh processing files
+├── data
+│   ├── raw/                  
+│         ├── 24_Coffee_Taste_Test.csv            
 │
-├── queries/                  # SQL files (retain this folder for SQL-heavy projects)
-│   ├── exploratory/          # Ad-hoc or investigative queries
-│   ├── transformations/      # Cleaning and reshaping logic
-│   └── final/                # Production-ready or presentation queries
+├── visuals/                  
+│      ├── Executive_Overview.png
+│      ├── Coffee_Preference_Insights.png
+│      ├── Blind_Taste_Insights.png
+│      ├── Consumer_Behaviour.png
+│      ├── Consumer_Segmentation.png
 │
-├── reports/                  # Final outputs: PDFs, slide decks, Word docs
-│
-├── visuals/                  # Exported charts, dashboard screenshots, ERD diagrams
-│
-├── docs/                     # Data dictionaries, schema notes, reference material
-│
-├── project_metadata.yml      # Machine-readable metadata (optional)
-└── README.md                 # You are here
+|___ assets
+      └── Dashboard_video.mp4
+      └── Data_Modelling_Architectural_Design-Coffee.png          
 ```
-
-> ⚠️ *Delete folders you didn't use. An empty folder is worse than no folder.*
-> SQL-heavy projects: keep `queries/`. Analysis-only projects: keep `notebooks/`. Both? Keep both.
-
 ---
 
 ## 5. Data Workflow
@@ -146,159 +138,142 @@ The primary objective of this project is to deliver an executive dashboard that 
 3. **Cleaning:** Several data quality improvements were performed to ensure reliable analysis and accurate reporting, such as; data type validation, handling of missing values (such as NA, Blank, Other), standardizing categories, and removing redundancies (such as, '_other, _specify' columns). 
 4. **Transformation:** Several analytical fields were created to improve reporting capabilities and enable meaningful business metrics. These fields include; Numeric spending columns - survey spending categories were originally stored as text ranges ($20-$40, $40-$60, etc.). These categories were converted into representative midpoint values to support numerical calculations such as; average monthly spend, average equipment spend, average price paid, and average willingness to pay. Cafe Value Rate originally came in as a binary Yes/No field and was transformed into a measurable KPI representing the percentage of respondents who believe cafe purchases provide good value. Same approach was applied to Equipment Value Rate. Finally, Blind Taste Comparison dataset contained two separate preference columns (preferred_abc and preferred_ad), but to support comparative analysis, these columns were unpivoted into two new fields (comparison - Blind tasting scenario, and Preferred Coffee - winning coffee selection), this transformation enabled the construction of the 100% Stacked Bar Chart that dynamically compares consumer preferences across blind tasting scenarios. 
 6. **Analysis:** Descriptive statistics, Blind taste comparative analysis, Average monthly spend value, Average equipment spend value, Cafe value rating, Equipment value rating, Preferred coffee analysis, Brewing method analysis, Preferred roast level analysis, Preferred strength analysis, Coffee style preference analysis, etc.
-7. **Output:** Summary report in PDF
+7. **Output:** Summary report (PDF)
 
 ---
 
 ## 6. Data Model & Schema
 
-<!--
-  Define your fields so that someone reading your analysis can follow along
-  without digging through your code.
-
-  WHAT GOOD LOOKS LIKE (one row example):
-  | transaction_id | string | Unique identifier per sales transaction | TXN-00482 |
-  | return_flag    | boolean | Whether the transaction included a return | TRUE |
-  | region_code    | string | Two-letter identifier for store region | "NE" |
-
-  WHAT TO AVOID:
-  ❌ Skipping this section because "the field names are self-explanatory."
-     They're not. Not to a reviewer. Not to you in six months.
-
-  📌 FOR SQL PROJECTS: If you have multiple tables, create one block per table.
-     Describe join keys and relationships here. Your ERD (Section 7) will
-     visualise what this section describes in text.
-
-  📌 FOR NON-SQL PROJECTS: Describe the shape of your dataset informally
-     if a formal schema doesn't apply. Even one paragraph is more helpful than nothing.
--->
-
-### Dataset / Table: `[name]`
+### Dataset / Table: `Coffee_Survey_Facts`
 
 | Field Name | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|
-| `[field_1]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
-| `[field_2]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
-| `[field_3]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
+| `submission_id` | string | Unique identifier for each survey response. | EPbo6r |
+| `age` | string | Respondent's age range | 25-34 years old |
+| `gender` | string | Respondent's gender. | Male |
+| `education_level` | string | Highest education level reported by respondent. | Bachelor's degree |
+| `ethnicity_race` | string | Respondent's reported ethnicity/race category. | Asian |
+| `employment_status` | string | Respondent's employment situation. | Full-time |
+| `number_children` | int | Number of children reported by respondent. | 2 |
+| `political_affiliation` | string | Political affiliation reported in the survey. | Independent |
+| `work_from_home` | string | Work-From-Home status or frequency. | I do a mix of both |
+| `cups` | int | Number of cups of coffee consumed per day. | 2 |
+| `brew` | string | Primary coffee brewing method used. | Pour over |
+| `primary_drinking_location` | string | Primary location where coffee is consumed. | At home |
+| `strength` | string | Preferred coffee strength. | Somewhat strong |
+| `style` | string | Preferred coffee style/profile. | Pourover |
+| `roast_level` | string | Preferred coffee roast level. | Light |
+| `caffeine` | string | Preferred caffeine level/type. | Full caffeine |
+| `overall_favourite_coffee` | string | Overall preferred coffee from the blind tasting | Coffee D |
+| `preferred_abc` | string | Coffee selected as preferred in the A/B/C blind comparison. | Coffee B |
+| `preferred_ad` | string | Preferred coffee in the A/D blind comparison | Coffee D |
+| `purchase` | string | Primary location/channel where coffee is purchased. | Local cafe |
 
-> **Row count (approx.):** [X rows]
-> **Date range:** [Start] – [End]
-> **Key join / relationship:** [e.g., `orders.customer_id` → `customers.id`]
 
-*Add additional table blocks as needed for multi-table projects.*
+### Dataset / Table: `Dim_Education`
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `education_id` | int | Unique identifier for each education level. | 2 |
+| `education_level` | string | Highest education level reported by respondent. | Bachelor's degree |
+
+
+### Dataset / Table: `Dim_Age`
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `age_id` | int | Unique identifier for the age range. | 1 |
+| `age` | string | Respondent's age range | 25-34 years old |
+
+
+### Dataset / Table: `Dim_Brewing_Method`
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `brew_id` | int | Unique identifier for the particular brewing method. | 1 |
+| `brew` | string | Primary coffee brewing method used. | Pour over |
+
+
+### Dataset / Table: `Dim_Caffeine`
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `caffeine_id` | int | Unique identifier for the particular caffeine type. | 3 |
+| `caffeine` | string | Preferred caffeine level/type. | Full caffeine |
+
+
+### Dataset / Table: `Dim_Coffee_Style`
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `stytle_id` | int | Unique identifier for the coffee style. | 3 |
+| `style` | string | Preferred coffee style/profile. | Pourover |
+
+
+### Dataset / Table: `Dim_Drinking_Location`
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `primary_drinking_location_id` | int | Unique identifier for the drinking location. | 7 |
+| `primary_drinking_location` | string | Primary location where coffee is consumed. | At home |
+
+
+### Dataset / Table: `Dim_Employment`
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `employment_id` | int | Unique identifier for the each of the employment status. | 5 |
+| `employment_status` | string | Respondent's employment situation. | Full-time |
+
+
+### Dataset / Table: `Dim_Favourite_Coffee`
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `overall_favourite_coffee_id` | int | Unique identifier for the preferred favourite coffee. | 5 |
+| `overall_favourite_coffee` | string | Overall preferred coffee from the blind tasting | Coffee D |
+
+
+### Dataset / Table: `Dim_Gender`
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `gender_id` | int | Unique identifier for gender status. | 4 |
+| `gender` | string | Respondent's gender. | Male |
+
+
+### Dataset / Table: `Dim_Purchase`
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `purchase_id` | int | Unique identifier for the purchase channel/location . | 4 |
+| `purchase` | string | Primary location/channel where coffee is purchased. | Local cafe |
+
+
+### Dataset / Table: `Dim_Roast_Level`
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `roast_level_id` | int | Unique identifier for roast level type. | 2 |
+| `roast_level` | string | Preferred coffee roast level. | Light |
+
+
+### Dataset / Table: `Dim_Work_From_Home`
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `work_from_home_id` | int | Unique identifier for Work-From-Home status. | 2 |
+| `work_from_home` | string | Work-From-Home status or frequency. | I do a mix of both |
+
+
+> **Row count (approx.):** 4,042 rows
+> **Key join / relationship:**  `Dim_Education.education_id` → `Coffee_Survey_Facts.education_id`, `Dim_Age.age_id` → `Coffee_Survey_Facts.age_id`, `Dim_Brewing_Method.brew_id` → `Coffee_Survey_Facts.brew_id`, `Dim_Caffeine.caffeine_id` → `Coffee_Survey_Facts.caffeine_id`, `Dim_Coffee_Style.style_id` → `Coffee_Survey_Facts.style_id`, `Dim_Drinking_Location.primary_drinking_location_id` → `Coffee_Survey_Facts.primary_drinking_location_id`, `Dim_Employment.employment_id` → `Coffee_Survey_Facts.employment_id`, `Dim_Favourite_Coffee.overall_favourite_coffee_id` → `Coffee_Survey_Facts.overall_favourite_coffee_id`, `Dim_Gender.gender_id` → `Coffee_Survey_Facts.gender_id`, `Dim_Purchase.purchase_id` → `Coffee_Survey_Facts.purchase_id`, `Dim_Roast_Level.roast_level_id` → `Coffee_Survey_Facts.roast_level_id`, `Dim_Work_From_Home.work_from_home_id` → `Coffee_Survey_Facts.work_from_home_id`
+(All: One-to-Many single direct relationships)
 
 ---
 
-## 7. ERD - Entity Relationship Diagram
-### *(Primarily for SQL Projects - remove this section if not applicable)*
+## 7. Analysis & Metrics
 
-<!--
-  An ERD shows how your tables connect to each other visually.
-  It is the fastest way for a reviewer to understand the data structure
-  of a SQL project without reading every query.
-
-  HOW TO INCLUDE YOUR ERD:
-  Option A - Image embed (most common):
-    Export your ERD from dbdiagram.io, DBeaver, Lucidchart, or similar.
-    Save to /visuals/erd.png and reference it below.
-
-  Option B - dbdiagram.io code block (version-controllable):
-    Paste your schema definition code directly in the fenced block below.
-    Anyone can paste it into dbdiagram.io to regenerate the visual.
-
-  Option C - Mermaid diagram (renders natively in GitHub):
-    Use the mermaid code block syntax below.
-    GitHub will render this as a diagram automatically.
-
-  PICK ONE. Don't use all three. Delete the options you don't use.
--->
-
-### Option A - Embedded Image
-![ERD Diagram](visuals/erd.png)
-*[Brief caption: e.g., "Three-table schema - orders, customers, and products joined on shared IDs."]*
-
----
-
-### Option B - dbdiagram.io Schema Definition
-```
-Table orders {
-  order_id    int     [pk]
-  customer_id int     [ref: > customers.customer_id]
-  product_id  int     [ref: > products.product_id]
-  order_date  date
-  amount      float
-}
-
-Table customers {
-  customer_id int  [pk]
-  region_code string
-  signup_date date
-}
-
-Table products {
-  product_id   int    [pk]
-  category     string
-  unit_price   float
-}
-```
-*Paste this into [dbdiagram.io](https://dbdiagram.io) to view the visual.*
-
----
-
-### Option C - Mermaid Diagram *(renders on GitHub)*
-```mermaid
-erDiagram
-    ORDERS {
-        int order_id PK
-        int customer_id FK
-        int product_id FK
-        date order_date
-        float amount
-    }
-    CUSTOMERS {
-        int customer_id PK
-        string region_code
-        date signup_date
-    }
-    PRODUCTS {
-        int product_id PK
-        string category
-        float unit_price
-    }
-    ORDERS ||--o{ CUSTOMERS : "placed by"
-    ORDERS ||--o{ PRODUCTS : "contains"
-```
-
----
-
-**Table Relationships Summary:**
-
-| Relationship | Join Key | Type |
-|-------------|----------|------|
-| `orders` → `customers` | `customer_id` | Many-to-One |
-| `orders` → `products` | `product_id` | Many-to-One |
-| [Add rows as needed] | | |
-
----
-
-## 8. Analysis & Metrics
-
-<!--
-  Explain what you measured and how - before you share what you found.
-
-  WHAT GOOD LOOKS LIKE:
-  Metric: "Customer Return Rate"
-  Definition: "Number of transactions flagged as returns divided by total
-               transactions, calculated at product-category and regional grain."
-  Why It Matters: "Return rate - not sales volume - was hypothesised to
-                  explain regional revenue gaps. This metric tests that hypothesis."
-
-  WHAT TO AVOID:
-  ❌ Defining a metric only in code: SUM(returns) / COUNT(transaction_id)
-     That's an implementation. Write the plain-language definition here.
-     Both belong in your project - the definition in the README,
-     the implementation in the code.
--->
 
 ### Analytical Approach
 
@@ -308,9 +283,19 @@ The project followed a structured Business Intelligence workflow designed to tra
 
 | Metric | Plain-Language Definition | Why It Matters |
 |--------|--------------------------|----------------|
-| `Total Respondents` | Total number of survey participants included in the analysis. | indicates survey coverage and confidence in the findings |
-| `[Metric 2]` | [What it measures, in one sentence] | [What decision or question it answers] |
-| `[Metric 3]` | [What it measures, in one sentence] | [What decision or question it answers] |
+| `Total Respondents` | Total number of survey participants included in the analysis. | Establishes the population represented in the analysis. |
+| `Avg Cups Per Day` | Average number of coffee cups consumed daily by respondents. | Measures consumption intensity and identifies the scale of daily coffee demand. |
+| `Avg Monthly Spend` | Estimated average monthly expenditure on coffee. | Provides benchmark for consumer spending and potential market value. |
+| `Avg Equipment Spend` | Estimated average investment in home coffee equipment. | Measures consumers' financial commitment to home brewing. |
+| `Cafe Value Rate` | Percentage of respondents answering 'Yes' to whether cafe purchases provide good value | Measures perceived value of the cafe experience and identifies potential pricing/value gaps. |
+| `Equipment Value Rate` | Percentage of respondents answering 'Yes' to whether coffee equipment provides good value | Measures satisfaction with home brewing investments. |
+| `Most Preferred Coffee` | Coffee style with the highest number of respondents selecting it as their favourite. | Identifies the strongest overall product preference. |
+| `Most Preferred Roast` | Roast level with the highest number of selections. | Helps identify the roast profile with the strongest consumer demand. |
+| `Most Preferred Brew Method` | Brewing method receiving the highest number of selections. | Identifies the dominant preparation method and potential equipment demand. |
+| `Most Preferred Strength` | Coffee strength category receiving the highest number of selections. | Supports product formulation and strength positioning. |
+| `Blind Taste Preference` | Coffee sample receiving the highest overall preference in the blind tasting. | Identifies the strongest product based on sensory preference rather than brand identity. |
+| `Average Bitterness` | Mean bitterness rating across coffee samples. | Helps assess how bitterness relates to consumer acceptance. |
+| `Average Acidity` | Mean acidity rating across coffee samples. | Helps identify acidity profiles associated with consumer preference. |
 
 ### Methods Used
 
