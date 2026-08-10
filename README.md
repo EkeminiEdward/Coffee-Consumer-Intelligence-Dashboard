@@ -267,8 +267,7 @@ Coffee-Consumer-Intelligence-Dashboard/
 
 
 > **Row count (approx.):** 4,042 rows
-> **Key join / relationship:**  `Dim_Education.education_id` → `Coffee_Survey_Facts.education_id`, `Dim_Age.age_id` → `Coffee_Survey_Facts.age_id`, `Dim_Brewing_Method.brew_id` → `Coffee_Survey_Facts.brew_id`, `Dim_Caffeine.caffeine_id` → `Coffee_Survey_Facts.caffeine_id`, `Dim_Coffee_Style.style_id` → `Coffee_Survey_Facts.style_id`, `Dim_Drinking_Location.primary_drinking_location_id` → `Coffee_Survey_Facts.primary_drinking_location_id`, `Dim_Employment.employment_id` → `Coffee_Survey_Facts.employment_id`, `Dim_Favourite_Coffee.overall_favourite_coffee_id` → `Coffee_Survey_Facts.overall_favourite_coffee_id`, `Dim_Gender.gender_id` → `Coffee_Survey_Facts.gender_id`, `Dim_Purchase.purchase_id` → `Coffee_Survey_Facts.purchase_id`, `Dim_Roast_Level.roast_level_id` → `Coffee_Survey_Facts.roast_level_id`, `Dim_Work_From_Home.work_from_home_id` → `Coffee_Survey_Facts.work_from_home_id`
-(All: One-to-Many single direct relationships)
+> **Key join / relationship:**  `Dim_Education.education_id` → `Coffee_Survey_Facts.education_id`, `Dim_Age.age_id` → `Coffee_Survey_Facts.age_id`, `Dim_Brewing_Method.brew_id` → `Coffee_Survey_Facts.brew_id`, `Dim_Caffeine.caffeine_id` → `Coffee_Survey_Facts.caffeine_id`, `Dim_Coffee_Style.style_id` → `Coffee_Survey_Facts.style_id`, `Dim_Drinking_Location.primary_drinking_location_id` → `Coffee_Survey_Facts.primary_drinking_location_id`, `Dim_Employment.employment_id` → `Coffee_Survey_Facts.employment_id`, `Dim_Favourite_Coffee.overall_favourite_coffee_id` → `Coffee_Survey_Facts.overall_favourite_coffee_id`, `Dim_Gender.gender_id` → `Coffee_Survey_Facts.gender_id`, `Dim_Purchase.purchase_id` → `Coffee_Survey_Facts.purchase_id`, `Dim_Roast_Level.roast_level_id` → `Coffee_Survey_Facts.roast_level_id`, `Dim_Work_From_Home.work_from_home_id` → `Coffee_Survey_Facts.work_from_home_id` (All: One-to-Many Single Direction Relationships)
 
 ---
 
@@ -299,12 +298,11 @@ The project followed a structured Business Intelligence workflow designed to tra
 
 ### Methods Used
 
-- [e.g., Descriptive statistics - distribution, central tendency, outlier detection]
-- [e.g., Trend analysis across [time period]]
-- [e.g., Segmentation / group comparison by [dimension]]
-- [e.g., Correlation analysis between [variable A] and [variable B]]
-- [e.g., SQL window functions for [specific aggregation]]
-- [e.g., Custom aggregation or transformation logic in [tool]]
+- Data Cleaning and Transformation (Power Query ETL).
+- Created a Dimensional Data Model (Star Schema).
+- Interactive Data Visualization and Executive Dashboard Design
+- Descriptive statistics - distribution analysis, comparative data analysis.
+- DAX Measure Development.
 
 ---
 
