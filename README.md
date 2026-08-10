@@ -57,14 +57,14 @@ This structured methodology ensured that the project progressed logically from b
 ## 2. Objectives
 
 
-- **Primary Objective:** The primary objective of this project is to deliver an executive dashboard that converts survey responses into meaningful business insights for decision-makers. Also, the project aims to:
-- **Secondary Objective 1:** Analyze consumer coffee preferences across coffee styles, roast levels, brewing methods, strength, and caffeine choices.
-- **Secondary Objective 2:** Evaluate blind taste test outcomes to identify products with the strongest sensory appeal.
-- **Secondary Objective 3:** Examine consumer purchasing behaviour, spending patterns, and willingness to pay.
-- **Secondary Objective 4:** Understand how demographics influence coffee preferences and purchasing decision.
-- **Secondary Objective 5:** Measure consumer perceptions of cafe experiences and home brewing equipment.
-- **Secondary Objective 6:** Build an interactive dashboard that enables executive to monitor key consumer trends through dynamic filtering and visualization.
-- **Secondary Objective 7:** Deliver actionable recommendations that support product development, pricing strategies, and customer engagement initiatives.
+The primary objective of this project is to deliver an executive dashboard that converts survey responses into meaningful business insights for decision-makers. Also, the project aims to:
+- Analyze consumer coffee preferences across coffee styles, roast levels, brewing methods, strength, and caffeine choices.
+- Evaluate blind taste test outcomes to identify products with the strongest sensory appeal.
+- Examine consumer purchasing behaviour, spending patterns, and willingness to pay.
+- Understand how demographics influence coffee preferences and purchasing decision.
+- Measure consumer perceptions of cafe experiences and home brewing equipment.
+- Build an interactive dashboard that enables executive to monitor key consumer trends through dynamic filtering and visualization.
+- Deliver actionable recommendations that support product development, pricing strategies, and customer engagement initiatives.
 
 
 ---
@@ -163,12 +163,12 @@ This structured methodology ensured that the project progressed logically from b
 [Output / Visualisation / Reporting]
 ```
 
-1. **Source:** The dataset contains a CSV file, which is a Coffee Taste testing survey dataset covering consumer demographics, coffee preferences, purchasing behaviour, blind taste evaluations, and spending patterns.
-2. **Ingestion:** [How was it brought in?]
-3. **Cleaning:** [What issues did you find and fix?]
-4. **Transformation:** [What new fields, aggregations, or structures did you create?]
-5. **Analysis:** [What methods - statistical, visual, query-based, model-based?]
-6. **Output:** [What form do the results take?]
+1. **Source:** The dataset contains a CSV file, which is a Coffee Taste testing survey dataset consisting of over 4,000 responses and 57 attributes, covering consumer demographics, coffee preferences, purchasing behaviour, blind taste evaluations, and spending patterns.
+2. **Ingestion:** Loaded into Power Query. File contained approx. 4,042 rows and 57 columns.
+3. **Cleaning:** Several data quality improvements were performed to ensure reliable analysis and accurate reporting, such as; data type validation, handling of missing values (such as NA, Blank, Other), standardizing categories, and removing redundancies (such as, '_other, _specify' columns). 
+4. **Transformation:** Several analytical fields were created to improve reporting capabilities and enable meaningful business metrics. These fields include; Numeric spending columns - survey spending categories were originally stored as text ranges ($20-$40, $40-$60, etc.). These categories were converted into representative midpoint values to support numerical calculations such as; average monthly spend, average equipment spend, average price paid, and average willingness to pay. Cafe Value Rate originally came in as a binary Yes/No field and was transformed into a measurable KPI representing the percentage of respondents who believe cafe purchases provide good value. Same approach was applied to Equipment Value Rate. Finally, Blind Taste Comparison dataset contained two separate preference columns (preferred_abc and preferred_ad), but to support comparative analysis, these columns were unpivoted into two new fields (comparison - Blind tasting scenario, and Preferred Coffee - winning coffee selection), this transformation enabled the construction of the 100% Stacked Bar Chart that dynamically compares consumer preferences across blind tasting scenarios. 
+6. **Analysis:** 
+7. **Output:** [What form do the results take?]
 
 ---
 
