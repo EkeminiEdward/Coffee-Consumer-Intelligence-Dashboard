@@ -163,7 +163,7 @@ This structured methodology ensured that the project progressed logically from b
 [Output / Visualisation / Reporting]
 ```
 
-1. **Source:** [Where did the data come from? Format, size, access method.]
+1. **Source:** The dataset contains a CSV file, which is a Coffee Taste testing survey dataset covering consumer demographics, coffee preferences, purchasing behaviour, blind taste evaluations, and spending patterns.
 2. **Ingestion:** [How was it brought in?]
 3. **Cleaning:** [What issues did you find and fix?]
 4. **Transformation:** [What new fields, aggregations, or structures did you create?]
