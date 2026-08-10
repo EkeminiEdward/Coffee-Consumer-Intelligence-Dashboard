@@ -129,28 +129,6 @@ The primary objective of this project is to deliver an executive dashboard that 
 
 ## 5. Data Workflow
 
-<!--
-  Show how data moved through your project - from source to output.
-  Every transformation decision should be traceable here.
-
-  WHAT GOOD LOOKS LIKE:
-  1. Source: "Monthly CSV exports pulled from the internal POS system.
-              Five files, one per region, covering Jan 2023–Jun 2024."
-  2. Ingestion: "Loaded into Python using pandas. Files concatenated into
-                 a single dataframe (approx. 340,000 rows)."
-  3. Cleaning: "Removed 1.2% of rows with null transaction IDs.
-                Standardised date formats across regional files.
-                Resolved product category naming inconsistencies (3 variants → 1)."
-  4. Transformation: "Created a returns_rate field at product-category level.
-                      Aggregated to weekly and regional grain for trend analysis."
-  5. Analysis: "Descriptive statistics, regional comparison, return rate
-                segmentation by product category."
-  6. Output: "Summary report (PDF), annotated notebook, processed CSV."
-
-  WHAT TO AVOID:
-  ❌ "Data was cleaned and analysed." (No chain. No decisions. No trust.)
--->
-
 ```
 [Data Source(s)]
       ↓
@@ -167,8 +145,8 @@ The primary objective of this project is to deliver an executive dashboard that 
 2. **Ingestion:** Loaded into Power Query. File contained approx. 4,042 rows and 57 columns.
 3. **Cleaning:** Several data quality improvements were performed to ensure reliable analysis and accurate reporting, such as; data type validation, handling of missing values (such as NA, Blank, Other), standardizing categories, and removing redundancies (such as, '_other, _specify' columns). 
 4. **Transformation:** Several analytical fields were created to improve reporting capabilities and enable meaningful business metrics. These fields include; Numeric spending columns - survey spending categories were originally stored as text ranges ($20-$40, $40-$60, etc.). These categories were converted into representative midpoint values to support numerical calculations such as; average monthly spend, average equipment spend, average price paid, and average willingness to pay. Cafe Value Rate originally came in as a binary Yes/No field and was transformed into a measurable KPI representing the percentage of respondents who believe cafe purchases provide good value. Same approach was applied to Equipment Value Rate. Finally, Blind Taste Comparison dataset contained two separate preference columns (preferred_abc and preferred_ad), but to support comparative analysis, these columns were unpivoted into two new fields (comparison - Blind tasting scenario, and Preferred Coffee - winning coffee selection), this transformation enabled the construction of the 100% Stacked Bar Chart that dynamically compares consumer preferences across blind tasting scenarios. 
-6. **Analysis:** 
-7. **Output:** [What form do the results take?]
+6. **Analysis:** Descriptive statistics, Blind taste comparative analysis, Average monthly spend value, Average equipment spend value, Cafe value rating, Equipment value rating, Preferred coffee analysis, Brewing method analysis, Preferred roast level analysis, Preferred strength analysis, Coffee style preference analysis, etc.
+7. **Output:** Summary report in PDF
 
 ---
 
@@ -324,13 +302,13 @@ erDiagram
 
 ### Analytical Approach
 
-[Describe how you approached the analysis. Were you exploring patterns? Testing a hypothesis? Building and validating a pipeline? Be honest about your method - exploratory work is valid, just call it that.]
+The project followed a structured Business Intelligence workflow designed to transform raw survey responses into actionable insights. The analytical process consisted of six key stages: Business understanding, Data preparation, Data modelling, Feature engineering, Data visualization, and Business insight generation. The findings were translated into practical recommendations to support product strategy, pricing decisions, and customer engagement.
 
 ### Key Metrics Defined
 
 | Metric | Plain-Language Definition | Why It Matters |
 |--------|--------------------------|----------------|
-| `[Metric 1]` | [What it measures, in one sentence] | [What decision or question it answers] |
+| `Total Respondents` | Total number of survey participants included in the analysis. | indicates survey coverage and confidence in the findings |
 | `[Metric 2]` | [What it measures, in one sentence] | [What decision or question it answers] |
 | `[Metric 3]` | [What it measures, in one sentence] | [What decision or question it answers] |
 
