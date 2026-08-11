@@ -306,143 +306,112 @@ The project followed a structured Business Intelligence workflow designed to tra
 
 ---
 
-## 9. Key Insights
+## 8. Key Insights
 
-<!--
-  Findings + implications. Not just what happened - what it means.
 
-  WHAT GOOD LOOKS LIKE:
-  ✅ "Return rates, not sales volume, explain Region A's underperformance.
-      Region A's return rate on home goods was 34% - more than double the
-      company average. Revenue was not lost at the point of sale; it was
-      lost post-sale through refunds. This points to a fulfilment or
-      product quality issue specific to that region, not a demand problem."
+**Insight 1: The consumer base is dominated by young adults.**
+The 25-34-year age group represents the largest share of respondents, indicating that young professionals form the core audience within the survey population.
 
-  WHAT TO AVOID:
-  ❌ "Region A had lower revenue than other regions in Q4."
-     (That's an observation. It describes what happened.
-      An insight says what it means and where to look next.)
+**Insight 2: Coffee consumption is part of the daily routine.**
+Respondents consume an average of 3 cups of coffee per day, demonstrating that coffee is integrated into everyday lifestyles rather than being an occasional purchase.
 
-  Aim for 3–6 insights. Quality over quantity.
--->
+**Insight 3: Coffee is primarily consumed at home.**
+Home remains the dominant drinking location, reflecting the continued importance of home brewing equipment, convenience, and flexible working arrangements.
 
-**Insight 1: [Short descriptive headline]**
-[What you found + what it suggests. One short paragraph.]
+**Insight 4: Coffee D achieved the strongest overall blind preference.**
+Without brand influence, Coffee D received the highest number of consumer selections, demonstrating superior sensory appeal.
 
-**Insight 2: [Short descriptive headline]**
-[What you found + what it suggests.]
+**Insight 5: Blind tasting reveals differences between stated preference and actual experience.**
+The blind taste experiment shows that consumers may choose different products when branding and prior expectations are removed, reinforcing the importance of sensory testing during product development.
 
-**Insight 3: [Short descriptive headline]**
-[What you found + what it suggests.]
+**Insight 6: Most consumers spend between $20 - $60 per month on coffee.**
+The largest respondent segments fall within moderate monthly spending ranges, suggesting a stable consumer market with predictable purchasing behaviour.
 
-**Insight 4 (if applicable): [Short descriptive headline]**
-[What you found + what it suggests.]
+**Insight 7: Local cafes remain an important purchasing channel.**
+Despite the growth of homebrewing, consumers continue purchasing coffee from cafes, supporting the importance of physical retail experiences.
+
+**Insight 8: Hybrid work has influenced coffee consumption habits.**
+A considerable proportion of the respondents combine home and office work, creating demand for products suited to both environments.
+
+**Insight 9: Bachelor's degree holders represent the largest educational segment.**
+The survey population is largely composed of university-educated consumers, suggesting relatively high levels of product awareness and purchasing confidence.
+
+**Insight 10: The survey reflects a diverse consumer population.**
+Variation across ethnicity, education, employment, and household characteristics demonstrates that coffee consumption spans multiple demographic segments, reinforcing the need for broad yet targeted marketing strategies.
+
+**Insight 11: Pourover is the most preferred coffee style.**
+Pourover emerged as the leading coffee style, indicating growing consumer appreciation for specialty brewing methods that emphasize flavour clarity and quality.
 
 ---
 
-## 10. Recommendations
-
-<!--
-  Action-oriented. Addressed to a real audience.
-  Tied explicitly to the insight that supports each one.
-
-  WHAT GOOD LOOKS LIKE:
-  Priority: High
-  Recommendation: "Conduct a fulfilment audit for home goods deliveries
-                   in Region A - specifically investigating whether returns
-                   correlate with a particular warehouse, carrier, or SKU batch."
-  Based On: Insight 1 - return rate anomaly in Region A
-  Owner: Operations / Supply Chain team
-
-  WHAT TO AVOID:
-  ❌ "Improve the return rate."
-     (Not actionable. Doesn't say who, how, or where to start.)
-  ❌ "Further analysis is needed."
-     (This is a placeholder, not a recommendation.)
--->
+## 9. Recommendations
 
 | Priority | Recommendation | Based On | Suggested Owner |
 |----------|---------------|----------|-----------------|
-| High | [Specific, actionable step] | [Insight it comes from] | [Who should act] |
-| Medium | [Specific, actionable step] | [Insight it comes from] | [Who should act] |
-| Low | [Exploratory or longer-term suggestion] | [Insight it comes from] | [Who should act] |
+| High | Prioritize the young professional market: Develop products, loyalty programs, and digital marketing campaigns that resonate with consumers aged 25-34, who represent the largest segment of the survey. | From Insight 1 - The consumer base is dominated by young adults. | Executives |
+| High | Continue Blind Taste Validation: Incorporate regular blind taste testing into product development to ensure new products succeed based on flaour quality rather than brand perception alone | from Insight 5 - Blind tasting reveals differences between stated preference and actual experience. | Executives |
+| Medium | Develop Segment-Specific Marketing: Use demographic insights such as age, education, employment status, and household composition to personalize marketing messages and product recommendations. | From Insight 10 - The survey reflects a diverse consumer population. | Executives |
+| Medium | Promote Everyday Coffee Rituals: Since coffee is primarily consumed at home and forms part of consumers' daily routines, position products around convenience, consistency, and quality to strengthen long-term customer engagement. | From Insights 2 & 3 - Coffee consumption is part of the daily routine, and Coffee is primarily consumed at home. | Executives |
+| Medium | Align Pricing with Consumer Expectations: Introduce tiered pricing strategies that accommodates both valued-conscious consumers and those willing to pay premium prices for higher-quality coffee experiences, | From Insight 6 - Most consumers spend between $20 - $60 per month on coffee. | Executives |
+| High | Expand Specialty Coffee Offerings: Increase investment in Pourover products and the light roast selections, as these align closely with current consumer  preferences. | From Insight 11 - Pourover is the most preferred coffee style. | Executives |
 
 ---
 
-## 11. Assumptions & Limitations
-
-<!--
-  WHAT GOOD LOOKS LIKE:
-  Assumption: "Transaction records were assumed to be complete for all five regions.
-               No validation was performed against source system record counts."
-  Limitation: "The analysis cannot distinguish between returns initiated by
-               the customer vs. returns initiated by the business (e.g., recalls).
-               If business-initiated returns are concentrated in Region A, the
-               return rate finding may reflect a policy decision, not a quality issue."
-
-  WHAT TO AVOID:
-  ❌ Leaving this section blank or writing "None known."
-     Every project has limitations. Documenting them is a sign of
-     analytical maturity - not a confession of failure.
--->
+## 10. Assumptions & Limitations
 
 ### Assumptions
-- [What did you treat as true without being able to verify?]
-- [What simplifications did you make for scope or feasibility?]
-- [What domain rules or definitions did you accept as given?]
+- Survey responses accurately represent each participant's coffee consumption behaviour, purchasing habits, and personal preferences.
+- Respondents answered all survey questions honestly without intentional bias or misrepresentation.
+- The numerical midpoint values assigned to spending ranges (e.g., $20-$40 'n $30) reasonably represent average consumer expenditure for analytical puposes.
+- Blind taste evaluations reflect genuine sensory preferences since respondents were unaware of the coffee identities during assessment.
+- Survey responses are independent observations, with each  submission representing a unique participant.
+- Consumer preferences captured in the survey remain sufficiently stable to support strategic business decision-making within the reporting period.
 
 ### Limitations
-- [What gaps exist in the data?]
-- [What analysis was out of scope but could affect interpretation?]
-- [What would a more rigorous version of this project include?]
-- [Are there known biases in the data source or collection method?]
+- Geographic Representation: The survey does not necessarily represent coffee consumers across all countries or regions. Consumer behaviour may vary significantly between different markets.
+- Self-Reported Responses: Behavioural data is based on participant self-reporting and may be influenced by recall bias or personal perception.
+- Spending Estimates: Monthly spending, willingness to pay, and equipment investment were converted from categorical ranges into representative midpoint values. While this enables numerical analysis, the resulting averages are estimates rather than exact monetary values.
+- Cross-Sectional Dataset: The survey represents a single period in time and therefore cannot measure changes in consumer behaviour over multiple years.
+- Brand Availability: Blind taste results evaluate sensory preference only and do not account for product availability, pricing, marketing influence, or brand loyalty.
 
-> *The goal here is pre-emptive Q&A. What would a thoughtful skeptic push back on? Document the answer here, before they ask.*
-
----
-
-## 12. Future Enhancements
-
-<!--
-  WHAT GOOD LOOKS LIKE:
-  ✅ "Automate the monthly data pull from the POS export folder using
-      a scheduled Python script, replacing the current manual process."
-  ✅ "Expand the return rate analysis to include carrier-level data,
-      which was unavailable in this dataset but exists in the logistics system."
-
-  WHAT TO AVOID:
-  ❌ "Add a machine learning model."
-     (Vague, and disconnected from the actual findings of this project.)
-  ❌ Listing aspirational features that don't follow logically from the work.
--->
-
-- [ ] [Enhancement 1 - specific and traceable to a real gap in this project]
-- [ ] [Enhancement 2]
-- [ ] [Enhancement 3]
-- [ ] [Enhancement 4]
 
 ---
 
-## 13. Deliverables
+## 11. Future Enhancements
+
+-  Predictive Analysis: Develop machine learning models to predict; consumer spending behaviour, product preference, purchase likelihood, and customer lifetime value.
+-  Customer Segmentation: Apply clustering algorithms to identify distinct consumer personas based on purchasing behaviour, demographics, and coffee preferences.
+-  Geographic Intelligence: Integrate geographic data to visualize regional coffee preferences using interactive maps.
+-  Time-Series Analysis: Incorporate historical survey data to monitor changes in consumer behaviour over time.
+-  Sentiment Analysis: Analyze open-ended survey responses using Natural Language Processing (NLP) to uncover additional consumer insights.
+-  Real-Time Reporting: Connect the dashboard to live survey platforms or cloud databases to enable continuous monitoring of consumer preferences.
+
+---
+
+## 12. Deliverables
 
 | Deliverable | Description | Location |
 |-------------|-------------|----------|
-| [Name] | [What it contains] | [`/path/to/file`] |
-| [Name] | [What it contains] | [`/path/to/file`] |
-| [Name] | [What it contains] | [`/path/to/file`] |
+| Executive Overview Page | High-level KPIs insights and consumer snapshot. | `/visuals/executive_Overview.png` |
+| Coffee Preference Insights Page | Preferences for coffee style, roast, brew method, and strength. | `/visuals/Coffee_Preference_Insights.png` |
+| Blind Taste Insights Page | Comparative analysis of blind tasting results and sensory scores. | `/visuals/Blind_Taste_Insights.png` |
+| Consumer Behaviour Page | Spending patterns, purchasing habits, expertise, and value perception. | `/visuals/Consumer_Behaviour.png` |
+| Consumer Segmentation Page | Demographic profiling and market segmentation. | `/visuals/Consumer_Sementation.png` |
+| Dashboard Short Video | A short video on the interactive state of the dashboard. | `/assets/Dashboard_video.mp4` |
+| Data Modelling Architectural Design | A Star Schema model | `/assets/Data_Modelling_Architectural_Design-coffee.png` |
 
 ---
 
-## 14. Author
+## 13. Author
 
-**[Your Name]**
-[Your role or title - current or target]
+**Ekemini Edward**
+Data Analyst
 
 - 🔗 [LinkedIn URL]
 - 💼 [Portfolio or GitHub profile URL]
-- 📧 [Email - optional]
+- 📧 edyswagg@gmail.com
 
 ---
 
-*Last updated: [Month YYYY]*
-*If this template helped you, consider starring the repository.*
+*Last updated: August, 2026*
+
