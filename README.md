@@ -407,7 +407,7 @@ Pourover emerged as the leading coffee style, indicating growing consumer apprec
 **Ekemini Edward**
 Data Analyst
 
-- 🔗 [LinkedIn URL]
+- 🔗 www.linkedin.com/in/ekemini-edward-052b5157
 - 💼 https://ekeminiedward.github.io/
 - 📧 edyswagg@gmail.com
 
